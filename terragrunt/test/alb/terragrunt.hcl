@@ -1,9 +1,7 @@
 terraform {
-  # Deploy version v0.0.1 in prod
-  source = "../../../ecs-with-terragrunt/modules/alb"
+  source = "../../../terrafrom/modules/alb"
 }
 
-# Indicate what region to deploy the resources into
 generate "provider" {
   path = "provider.tf"
   if_exists = "overwrite_terragrunt"

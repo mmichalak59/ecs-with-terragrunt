@@ -1,6 +1,6 @@
 terraform {
 #sciezka z modulami dla terraforma
-  source = "../../../ecs-with-terragrunt/modules/ecs"
+  source = "../../../terraform/modules/ecs"
 }
 
 #konfiguracja providera

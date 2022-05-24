@@ -1,5 +1,5 @@
 terraform {
-  source = "../../../ecs-with-terragrunt/modules/vpc"
+  source = "../../../terraform/modules/vpc"
 }
 
 generate "provider" {
