@@ -1,8 +1,9 @@
 terraform {
-
-  source = "/home/pajton/sysadmins_task/ecs-with-terragrunt/modules/ecs"
+#sciezka z modulami dla terraforma
+  source = "../../../ecs-with-terragrunt/modules/ecs"
 }
 
+#konfiguracja providera
 generate "provider" {
   path = "provider.tf"
   if_exists = "overwrite_terragrunt"
@@ -15,6 +16,8 @@ provider "aws" {
 EOF
 }
 
+
+#zaleznosci - ecs musi poczekac na outputy z vpc i alb
 dependency "vpc" {
   config_path = "../vpc"
 }
@@ -23,6 +26,7 @@ dependency "alb" {
 }
 
 
+#wartosci dla zmiennych
 inputs = {
 app_name = "testapp"
 lb_vpc  = dependency.vpc.outputs.vpc_id

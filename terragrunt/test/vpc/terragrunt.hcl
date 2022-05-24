@@ -1,5 +1,5 @@
 terraform {
-  source = "/home/pajton/sysadmins_task/ecs-with-terragrunt/modules/vpc"
+  source = "../../../ecs-with-terragrunt/modules/vpc"
 }
 
 generate "provider" {

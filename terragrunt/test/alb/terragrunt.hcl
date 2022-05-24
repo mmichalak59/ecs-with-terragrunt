@@ -1,6 +1,6 @@
 terraform {
   # Deploy version v0.0.1 in prod
-  source = "/home/pajton/sysadmins_task/ecs-with-terragrunt/modules/alb"
+  source = "../../../ecs-with-terragrunt/modules/alb"
 }
 
 # Indicate what region to deploy the resources into
